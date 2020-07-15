@@ -1,0 +1,96 @@
+    html{
+      scroll-behavior: smooth;
+    }
+    .kartu{
+      border-radius: 25px;
+      min-height: 180px;
+      background-image: url('../images/folder.png');
+      background-size: 60%;
+      opacity: 0.9;
+      background-position: left;
+      background-repeat: no-repeat;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .kartu:hover{
+      opacity: 1;
+      background-size: 70%;
+      animation: .8s bg-geser;
+    }
+    .kartuaddfile{
+      border-radius: 25px;
+      background-size: 25%;
+      background-position: left;
+      background-repeat: no-repeat;
+      animation: ease-in-out .4s down-fade;
+    }
+    @keyframes down-fade{
+      0%{
+        transform: translateY(-300px);
+      }
+      70%{
+        transform: translateY(20px);
+      }
+      100%{
+        transform: translateY(0);
+      }
+    }
+    @keyframes bg-geser{
+      0%{
+        background-position: left;
+      }
+      25%{
+        background-position: 210px;
+      }
+      65%{
+        background-position: -50px;
+      }
+      100%{
+        background-position: left;
+      }
+    }
+    .bg-putih{
+      background:#fafafa;
+    }
+    .kartu-file{
+      border-radius: 25px;
+      min-height: 180px;
+      background-image: url('../images/file.png');
+      background-size: 50%;
+      opacity: 0.9;
+      background-position: left;
+      background-repeat: no-repeat;
+      transition: 0.3s;
+    }
+    .kartu-file:hover{
+      opacity: 1;
+      background-size: 60%;
+      animation: .8s bg-geser;
+    }
+    @media (max-width: 768px){
+      .kartu-for-pc{
+        display: none;
+      }
+    }
+    .round-design{
+      border-radius: 25px;
+    }
+    .latar-hitam{
+      background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(33,33,33,1) 100%);
+    }
+    .btn-goback{
+      position: absolute;
+      left: 8px;
+      top: 20px;
+    }
+    .btn-logout{
+      color: white;
+      cursor: pointer;
+    }
+    .btn-logout:hover{
+      color: red;
+    }
+    .modegelap{
+      background-color: black;
+      color: #fff;
+    }

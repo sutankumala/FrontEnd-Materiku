@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Font AWS -->
+    <link href="fontaws/css/fontawesome.css" rel="stylesheet">
+    <link href="fontaws/css/brands.css" rel="stylesheet">
+    <link href="fontaws/css/solid.css" rel="stylesheet">
+    <link href="css/custom-css.css" rel="stylesheet">
+    
+    <title>Materi Kita</title>
+  </head>
+
+  <body class="latar-hitam">
+    <div class="bg-fade"></div>
+        <div class="card fixed-bottom text-light" style="border-radius: 25px 25px 0 0;background-color: #000;">
+          <div class="card-body">
+            <div align="center" class="d-flex flex-row bd-highlight">
+              <div class="p-2 bd-highlight col-sm-4"><a href="index.html"><i class="fas fa-home text-light"></i></a></div>
+              <input type="text" class="rounded-pill bg-dark form-control text-light col-sm-4" placeholder="Cari Materi" name="cari">
+              <div class="p-2 bd-highlight col-sm-4" data-toggle="modal" data-target="#logout"><i class="fas fa-sign-out-alt btn-logout"></i></div>
+            </div>
+          </div>
+        </div>
+
+    <div class="d-md-flex">
+      <div class="col-md-5 sticky-top" style="z-index: 1">
+        <div class="sticky-top">
+
+          <a href="index.html" class="kartu-for-pc" style="cursor: pointer;text-decoration: none;">
+            <div class="card mb-3 mr-2 ml-2 mt-2" style="z-index:-2;border-radius: 25px;">
+              <div class="card-body">
+                <h3 class="text-dark"><span class="text-primary">e</span>Library</h3>
+              </div>
+            </div>
+          </a>
+
+          <div class="card kartuaddfile mb-3 mr-2 ml-2 mt-2" style="z-index:-2;border-radius: 25px;min-height: 150px;">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-user text-primary"> </i> Informasi Anda</h5>
+              <form action="" method="POST">
+                  <input type="text" id="form1" disabled placeholder="NIP" name="" class="bg-light rounded-pill form-control" autocomplete="off" /><br/>
+                  <input type="text" id="form2" disabled placeholder="Nama Lengkap" name="" class="bg-light rounded-pill form-control" autocomplete="off"/><br/>
+                  <input type="text" id="form3" disabled placeholder="Pelajaran" name="" class="bg-light rounded-pill form-control" autocomplete="off"/><br/><div align="right">
+                  <div id="loading" style="display: none;" class="spinner-grow text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                  <button id="btn-simpan" onclick="loadingButton()" style="display: none;" class="btn btn-primary rounded-pill"><i class="fas fa-edit"></i> Simpan Perubahan</button>
+                  </div>
+              </form>
+                  <div id="btn-edit" class="row float-right mr-1 ml-1">
+                    <div>
+                      <button class="btn btn-secondary rounded-pill"  data-toggle="modal" data-target="#ubah-katasandi"><i class="fas fa-edit"></i> Ubah Password</button>&nbsp;
+                    </div>
+                    <div>
+                      <button onclick="editprofil()" class="btn btn-primary rounded-pill"><i class="fas fa-edit"></i> Edit Profil</button>
+                    </div>
+                  </div>
+            </div>
+          </div>
+
+          <div class="card kartu-for-pc mb-3 mr-2 ml-2 mt-2" style="z-index:-2;border-radius: 25px;">
+            <div class="card-body">
+              Ada Kendala ? <a href="https://wa.me/6289686030023" target="_blank">Hubungi Tim Kami <i class="fas fa-arrow-circle-right"></i></a><br/>
+              <p>Desain ini Memiliki Hak Cipta <b>&copy;Technopark Mutu 2020</b></p>
+              
+              <div>
+                <button class="btn btn-dark rounded-pill btn-sm" onclick="darkMode()" title="Tahap Pengembangan">Mode Gelap</button>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KONTEN SCROLL -->
+      <div class="col-md-7 p-0 p-md-2 mb-5">
+        <div class="card bg-putih" style="z-index: 10;border-radius: 25px  25px 0 0;min-height: 100vh;">
+          <div class="card-body">
+            <center>
+              <hr class="d-block d-md-none" style="background-color: #ccc;width: 32px;height: 5px;border-radius: 25px;"/>
+            </center>
+          
+          <div class="row mt-5">
+            <div class="col-sm-4 mb-3">
+              <a href="main.html" class="text-dark" style="text-decoration: none;">
+                <div class="card bg-light kartu">
+                  <div class="card-body">
+                    
+                    <div align="center" class="row d-flex">
+                      <div align="left" class="mr-1 ml-1 flex-fill">
+                        <h5 class="card-title">Terbaru</h5>
+                        <small class="text-primary">22 Mei 2002</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-4 mb-3">
+              <a href="main.html" class="text-dark" style="text-decoration: none;">
+                <div class="card bg-light kartu">
+                  <div class="card-body">
+                    
+                    <div align="center" class="row d-flex">
+                      <div align="left" class="mr-1 ml-1 flex-fill">
+                        <h5 class="card-title">Pelajaran</h5>
+                        <small class="text-primary">22 Mei 2002</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-4 mb-3">
+              <a href="main.html" class="text-dark" style="text-decoration: none;">
+                <div class="card bg-light kartu">
+                  <div class="card-body">
+                    
+                    <div align="center" class="row d-flex">
+                      <div align="left" class="mr-1 ml-1 flex-fill">
+                        <h5 class="card-title">Jurusan</h5>
+                        <small class="text-primary">22 Mei 2002</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Logout Modal -->
+<div class="modal fade round-design" id="logout" tabindex="-1" role="dialog" aria-labelledby="logout" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Keluar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Yakin ingin Keluar ?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary rounded-pill" data-dismiss="modal">Batal</button>
+        <a href="#" class="btn btn-primary rounded-pill"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Edit Password Modal -->
+<div class="modal fade round-design" id="ubah-katasandi" tabindex="-1" role="dialog" aria-labelledby="ubah-katasandi" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form action="" method="POST">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Ubah Katasandi</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="Password" placeholder="Katasandi Saat ini" name="" class="bg-light rounded-pill form-control" autocomplete="off" /><hr/>
+          <input type="Password" placeholder="Masukan Katasandi Baru" name="" class="bg-light rounded-pill form-control" autocomplete="off"/><br/>
+          <input type="Password" placeholder="Konfirmasi Katasandi Baru" name="" class="bg-light rounded-pill form-control" autocomplete="off"/><br/>   
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary rounded-pill" data-dismiss="modal">Batal</button>
+          <input type="submit" class="btn btn-primary rounded-pill" value="Simpan Perubahan" name="">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+  </body>
+</html>
